@@ -4,6 +4,6 @@
 using namespace std;
 
 int main(){
-    Player _player;
-    _player.printStatus();
+    Player player;
+    player.printStatus();
 }
