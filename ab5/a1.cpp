@@ -33,7 +33,8 @@ class Viereck{
         this->laenge = laenge;
     }
     Viereck(){
-        
+        this->laenge = 10;
+        this->breite = 10;
     }
 };
 
