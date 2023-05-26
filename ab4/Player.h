@@ -8,9 +8,10 @@
 class Player
 {
 private:
-    std::string name = "Xaviette Morgentau";
-    int leben = 3;
-    double energie = 1;
+    std::string name;
+    int leben;
+    double energie;
+    Player();
 
 public:
     std::string getName() const;

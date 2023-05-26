@@ -5,6 +5,12 @@
 
 using namespace std;
 
+Player::Player(){
+    this->energie = 0.2;
+    this->leben = 4;
+    this->name = "Xaviette Dosenkohl";
+}
+
 string Player::getName() const
 {
     return this->name;
