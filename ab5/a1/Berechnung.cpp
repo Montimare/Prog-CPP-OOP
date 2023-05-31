@@ -9,35 +9,27 @@ default constructor
 
 
 int main(){
-    double laenge;
-    double breite;
+
+    double laenge, breite;
     Viereck viereck;
 
-    while (1)
-    {
-        cout << "Gib laenge groesser 0\n";
-        cin >> laenge;
-        if (laenge > 0)
-        {
-            break;
-        }
-    }
-    while (1)
-    {
-        cout << "Gib breite groesser 0\n";
-        cin >> breite;
-        if (breite > 0)
-        {
-            break;
-        }
-    }
+    cout << "Gib laenge groesser 0\n";
+    laenge = viereck.UserInput();
+    cout << "Gib breite groesser 0\n";
+    breite = viereck.UserInput();
+
     viereck.SetLaengeBreite(breite, laenge);
 
+    cout << "Gib laenge groesser 0\n";
+    laenge = viereck.UserInput();
+    cout << "Gib breite groesser 0\n";
+    breite = viereck.UserInput();
 
+    Viereck viereck2(laenge, breite);
 
+    viereck.printLB();
+    viereck2.printLB();
 
-
-
-    cout << viereck.GetBreite() << " " << viereck.GetLaenge();
+    //cout << viereck.GetBreite() << " " << viereck.GetLaenge();
 
 }

@@ -15,7 +15,11 @@ class Viereck{
     double GetLaenge();
     double GetBreite();
     void SetLaengeBreite(double breite,double laenge);
+    double UserInput();
+    void input();
+    void printLB();
     Viereck();
+    Viereck(double laenge, double breite);
 };
 
 #endif
