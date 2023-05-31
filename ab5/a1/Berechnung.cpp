@@ -1,10 +1,10 @@
 #include "iostream"
+#include "Viereck.h"
 using namespace std;
 
 /*
-
-
-
+Klassen splitten
+default constructor
 */
 
 
@@ -21,7 +21,6 @@ int main(){
         {
             break;
         }
-        
     }
     while (1)
     {
@@ -31,7 +30,6 @@ int main(){
         {
             break;
         }
-        
     }
     viereck.SetLaengeBreite(breite, laenge);
 

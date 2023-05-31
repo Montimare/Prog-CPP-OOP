@@ -1,18 +1,18 @@
 #include "Viereck.h"
 
-double circumfrence(){
+double Viereck::circumfrence(){
     return (2*this->laenge+2*this->breite);
 }
-double flaeche(){
+double Viereck::flaeche(){
     return (this->laenge*this->breite);
 }
-double GetLaenge(){
+double Viereck::GetLaenge(){
     return laenge;
 }
-double GetBreite(){
+double Viereck::GetBreite(){
     return breite;
 }
-void SetLaengeBreite(double breite,double laenge){
+void Viereck::SetLaengeBreite(double breite,double laenge){
     this->breite = breite;
     this->laenge = laenge;
 }
