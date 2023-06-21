@@ -67,3 +67,55 @@ Viereck::Viereck(double laenge, double breite)
     //SetLaengeBreite(); auf 1 setzen
     //set laenge breite nochmal mit richtigen werten (soll nicht machen wenn es nicht geht)
 }
+
+//bei den dinger inst das linke this und das rechte die übergebene variable
+bool Viereck::operator <(const Viereck& viereck){
+    if (laenge*breite < viereck.laenge*viereck.breite)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool Viereck::operator >(const Viereck& viereck){
+    if (laenge*breite > viereck.laenge*viereck.breite)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool Viereck::operator ==(const Viereck& viereck){
+    if (laenge*breite == viereck.laenge*viereck.breite)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool Viereck::operator >=(const Viereck& viereck){
+    if (laenge*breite >= viereck.laenge*viereck.breite)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool Viereck::operator <=(const Viereck& viereck){
+    if (laenge*breite <= viereck.laenge*viereck.breite)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}

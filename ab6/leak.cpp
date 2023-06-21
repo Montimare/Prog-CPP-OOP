@@ -122,20 +122,33 @@ Person& Person::operator= (const Person& p)
 
 class Kunde
 {
-
     Person kunde;
-
     long kundennummer;
 
 public:
     Kunde(long nummer);
-    Kunde(Person neukunde, long nummer);
+    Kunde(const Person& neukunde, long nummer);
+    Kunde(const Kunde& k);
+    Kunde& operator=(const Kunde& k);
     void print() const;
 };
 
 Kunde::Kunde(long nummer) : kundennummer(nummer) {}                                            // Initialisierungsliste mit leerem Körper (leer, da keine weiteren Attribute) und Initialisierung der Kundennummer
-Kunde::Kunde(const Person neukunde, const long nummer) : kunde(neukunde), kundennummer(nummer) // Initialisierungsliste mit leerem Körper (leer, da keine weiteren Attribute) und Initialisierung der Kundennummer und des Kunden (Person) mit dem übergebenen Objekt neukunde (Kopie) und der Kundennummer nummer (Kopie)
+Kunde::Kunde(const Person& neukunde, const long nummer) : kunde(neukunde), kundennummer(nummer) // Initialisierungsliste mit leerem Körper (leer, da keine weiteren Attribute) und Initialisierung der Kundennummer und des Kunden (Person) mit dem übergebenen Objekt neukunde (Kopie) und der Kundennummer nummer (Kopie)
 {
+}
+Kunde::Kunde(const Kunde& k):kunde(k.kunde), kundennummer(k.kundennummer){}
+
+Kunde& Kunde::operator=(const Kunde& k)
+{
+    if (this == &k) {
+        return *this;
+    }
+
+    kunde = k.kunde;
+    kundennummer = k.kundennummer;
+
+    return *this;
 }
 
 void Kunde::print() const
@@ -146,7 +159,6 @@ void Kunde::print() const
 
 Kunde kunde_anlegen()
 {
-
     long nr;
     cout << "Neuen Kunden anlegen!" << endl;
     Person neu;
@@ -158,6 +170,20 @@ Kunde kunde_anlegen()
 
     return k;
 }
+
+//Kunde kunde_anlegen()
+//{
+//    long nr;
+//    cout << "Neuen Kunden anlegen!" << endl;
+//    Person neu;
+//    cout << "Bitte geben Sie die Kundennummer ein: ";
+//    cin >> nr;
+//    cin.ignore();
+//
+//    Kunde k{neu, nr};
+//
+//    return k;
+//}
 
 int main()
 {
@@ -172,6 +198,8 @@ int main()
 
     neuer.print();
     dagobert.print();
+
+    int a[] = {1,2,3,4,5,6,7};
 }
 
 

@@ -6,6 +6,7 @@ class Viereck{
 
     double laenge;
     double breite;
+    static int anzahlVierecke;
 
     public:
 
@@ -20,6 +21,12 @@ class Viereck{
     void printLB();
     Viereck();
     Viereck(double laenge, double breite);
+    bool operator<(const Viereck& viereck);
+    bool operator>(const Viereck& viereck);
+    bool operator ==(const Viereck& viereck);
+    bool operator >=(const Viereck& viereck);
+    bool operator <=(const Viereck& viereck);
+
 };
 
 #endif
