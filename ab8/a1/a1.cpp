@@ -69,7 +69,7 @@ public:
     void einlesen();
 };
 
-Raum_I::Raum_I() : Boden_I::Boden_I()
+Raum_I::Raum_I() : Boden_I()
 {
     hoehe = 2;
 }
@@ -94,7 +94,7 @@ public:
     double get_wohnflaeche();
 };
 
-Quader_I::Quader_I() : Raum_I::Raum_I()
+Quader_I::Quader_I() : Raum_I()
 {
 }
 
@@ -117,7 +117,7 @@ public:
     double get_wohnflaeche();
 };
 
-Schraege_I::Schraege_I() : Raum_I::Raum_I()
+Schraege_I::Schraege_I() : Raum_I()
 {
 }
 
