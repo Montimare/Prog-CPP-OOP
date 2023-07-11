@@ -1,0 +1,19 @@
+kommt nicht dran:
+    rautenvererbung/virtuelle vererbung
+    templates(wird aber trotzdem in der gegebenen main verwendet)
+
+kommt dran:
+    polymorphie
+    
+
+infos:
+    code soll kompilierfähig sein:
+        4pkt abzug pro fehler
+
+    do:
+        namen als kommentar in programm
+        makefile
+        attribute immer private
+
+    don't:
+        public methoden verwenden, wenn direkt auf attribute zugegriffen werden kann
