@@ -14,3 +14,7 @@ string Book::getAuthor(){
 string Book::getPublicationYear(){
     return "12.4.2000";
 }
+
+std::string Book::testing(){
+    return "WÖRX";
+}

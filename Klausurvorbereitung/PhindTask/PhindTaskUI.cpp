@@ -44,17 +44,28 @@ sauce: https://www.phind.com/agent?cache=clkcle7ka000jl908amncq21b
 
 using namespace std;
 
-void identify(){
+void identify()
+{
     cout << endl;
 }
 
-int main(){
+int main()
+{
     Book book1;
+    cout << "BÜCHER ANZAHL" << book1.getTotalItems();
     Magazine magazine1;
+    cout << "BÜCHER ANZAHL" << book1.getTotalItems();
     Book book2;
+    cout << "BÜCHER ANZAHL" << book1.getTotalItems();
     Book book3;
+    cout << "BÜCHER ANZAHL" << book1.getTotalItems();
     cout << "BOOKS" << endl;
-    cout << book1.getTitle() << endl << book2.getAuthor() << endl << book3.getPublicationYear() << endl;
+    cout << book1.getTitle() << endl
+         << book2.getAuthor() << endl
+         << book3.getPublicationYear() << endl;
     cout << "MAGAZINE" << endl;
-    cout << magazine1.getTitle() << endl << magazine1.getAuthor() << endl << magazine1.getPublicationYear() << endl;
+    cout << magazine1.getTitle() << endl
+         << magazine1.getAuthor() << endl
+         << magazine1.getPublicationYear() << endl;
+    cout << book1.testing() << endl;
 }

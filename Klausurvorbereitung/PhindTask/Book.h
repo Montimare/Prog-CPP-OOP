@@ -5,11 +5,12 @@
 
 class Book: public LibraryItem{
 private:
-
+    std::string test = "oh no";
 public:
     std::string getTitle();
     std::string getAuthor();
     std::string getPublicationYear();
+    std::string static testing(); 
 };
 
 #endif
