@@ -2,11 +2,11 @@
 #include <string>
 #include <cmath>
 
-std::string Zwerg::getRasse()
+std::string Zwerg::getRasse() const
 {
     return "Ich bin ein Zwerg.";
 }
-int Zwerg::getSchaden()
+int Zwerg::getSchaden() const
 {
     return 100;
 }
@@ -35,18 +35,20 @@ Zwerg::Zwerg() : Held(static_cast<int>(lebenspunkteBerechnen()))
 Zwerg::Zwerg(std::string name) : Held(name, static_cast<int>(lebenspunkteBerechnen()))
 {
 }
-Zwerg::Zwerg(std::string name, double groesse, int alter) : Held(name, groesse, alter, static_cast<int>(lebenspunkteBerechnen()))
+Zwerg::Zwerg(std::string name, double groesse, int alter) : Held(name, groesse, alter)
 {
+    LP = lebenspunkteBerechnen();
+    currentLP = LP;
 }
 Zwerg::~Zwerg()
 {
 }
 
-std::string Mensch::getRasse()
+std::string Mensch::getRasse() const
 {
     return "Ich bin ein Mensch.";
 }
-int Mensch::getSchaden()
+int Mensch::getSchaden() const
 {
     return 120;
 }
@@ -67,11 +69,11 @@ Mensch::~Mensch()
 {
 }
 
-std::string Elf::getRasse()
+std::string Elf::getRasse() const
 {
     return "Ich bin ein Elf.";
 }
-int Elf::getSchaden()
+int Elf::getSchaden() const
 {
     return 150;
 }

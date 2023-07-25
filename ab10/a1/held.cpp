@@ -1,6 +1,7 @@
 #include <string>
 #include "held.h"
 #include <cmath>
+#include <iostream>
 
 void Held::set_name(std::string name)
 {
@@ -13,6 +14,7 @@ void Held::set_groesse(double groesse)
     if (currentLP > LP)
     {
         currentLP = LP;
+        std::stoi("123");
     }
 }
 void Held::set_alter(int alter)
@@ -65,17 +67,17 @@ int Held::getSchaden() const
 
 std::ostream &operator<<(std::ostream &os, const Held &obj)
 {
-    os << obj.name;
-    os << std::string(", Alter: ");
+    os << obj.name << ", Alter: ";
     os << obj.alter;
-    os << std::string(", Groesse: ");
+    os << ", Groesse: ";
     os << obj.groesse;
-    os << std::string(", Lebenspunkte: ");
+    os << ", Lebenspunkte: ";
     os << obj.currentLP;
-    os << std::string("/");
+    os << "/";
     os << obj.LP;
     return os;
 }
+
 
 bool operator==(const Held &obj1, const Held &obj2)
 {
