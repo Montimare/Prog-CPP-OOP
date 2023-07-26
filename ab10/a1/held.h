@@ -1,9 +1,10 @@
 #ifndef HELD_H
 #define HELD_H
 #include <string>
+#include <iostream>
 
 class Held{
-private:
+protected:
 std::string name;
 double groesse;
 int alter;
