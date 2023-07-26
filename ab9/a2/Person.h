@@ -13,6 +13,8 @@ public:
     void print_name();
     void set_nachname(std::string);
     Person();
+    Person(Person& p);
+    Person& operator= (Person& p);
 };
 
 #endif
